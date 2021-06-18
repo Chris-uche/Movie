@@ -11,7 +11,7 @@ const Results=({movie})=>{
         <div className="container">
             
             {movie === 0 ? (<h1>No Movie Found</h1>) : (
-                movie.map((movieResults)=>(
+                movie.map(movieResults=>(
                     <Movie key={movieResults.id}
                     title={movieResults.title}
                     poster_path={movieResults.poster_path}

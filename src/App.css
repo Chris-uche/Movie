@@ -7,36 +7,118 @@ body{
   color: white;
   margin: 0
 }
+header{
+  padding:1rem;
+  background-color:#373b69;
+  display: flex;
+  justify-content:flex-end;
+}
+.search{
+  padding: 0.5rem 1.5rem;
+  background-color: transparent;
+  border-radius: 48px;
+  color: #f2f3ff;
+  font-size: 1.5rem;
+  border: 1px solid #22254b;
+}  
 
 .movieApp{
-  width: 350px;
+  width: 300px;
   margin: 1rem;
   border-radius: 3px;
   box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
   overflow: hidden;
+  position: relative;
+
+}
+.search:focus{
+  outline:none;
+}
+
+.tag{
+  background-color:#8c8c91;
+  padding: 0.6rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.tag.green{
+  color: green;
+  
+}
+.tag.orange{
+  color: orange;
+
+}
+.tag.red{
+  color: red;
 
 }
 
 @media only screen and (max-width: 600px) {
   .movieApp {
-    max-width: 100%;
+    width: 100%;
     display: flex;
     flex-direction:column;
     margin-left:1.3rem;
     margin-right:1.3rem;
     box-shadow: 3px 3px 3px rgba(8, 6, 6, 0.1);
     border-radius: 10px;
+    position: relative;
   
     
 
   }
+  .overView{
+    background-color: white;
+    position: absolute;
+    max-height: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color:#373b69 ;
+    transform: translateY(102%);
+    transition:transform 0.34s ease-in-out;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+  }
+    .movieApp:hover .overView{
+      transform: translateY(0);
+    }
 }
 .movieApp img{
   width: 100%;
 
 }
+.movie-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.movie-info h3{
+  margin: 0;
+}
 .container{
+  padding: 0.5rem;
   display:flex;
   flex-wrap: wrap;
   
 }
+.overView{
+  background-color: white;
+  position: absolute;
+  max-height: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color:#373b69 ;
+  transform: translateY(102%);
+  transition:transform 0.34s ease-in-out;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+}
+  .movieApp:hover .overView{
+    transform: translateY(0);
+  }
