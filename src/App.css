@@ -5,4 +5,38 @@
 body{
   background: rgb(28, 28, 32);
   color: white;
+  margin: 0
+}
+
+.movieApp{
+  width: 350px;
+  margin: 1rem;
+  border-radius: 3px;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+  overflow: hidden;
+
+}
+
+@media only screen and (max-width: 600px) {
+  .movieApp {
+    max-width: 100%;
+    display: flex;
+    flex-direction:column;
+    margin-left:1.3rem;
+    margin-right:1.3rem;
+    box-shadow: 3px 3px 3px rgba(8, 6, 6, 0.1);
+    border-radius: 10px;
+  
+    
+
+  }
+}
+.movieApp img{
+  width: 100%;
+
+}
+.container{
+  display:flex;
+  flex-wrap: wrap;
+  
 }
