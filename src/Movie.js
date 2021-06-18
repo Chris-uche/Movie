@@ -4,7 +4,7 @@ import imagesEndpoint from './imageEndpoint'
 const Movie =({title,poster_path,overview,vote_average})=>{
     return(
         <>
-        <div className="">
+        <div className="movieApp">
             <img src={imagesEndpoint + poster_path} alt={title} />
             <div className="movie-info">
                 <h3>{title}</h3>
